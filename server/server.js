@@ -11,7 +11,7 @@ import ConnectCloudinary from './config/cloudinary.js';
 
 const app=express();
 app.use(cors({
-    origin: "https://bike-portal-frontend.vercel.app/",  // Specify your frontend origin
+    origin: "https://bike-portal-frontend.vercel.app",  // Specify your frontend origin
      
 }));
 
