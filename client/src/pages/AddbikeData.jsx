@@ -25,7 +25,8 @@ const AddbikeData = () => {
         description:"",
 
     });
-
+    
+    axios.defaults.withCredentials=true;
     const handleFileChange = (e) => {
         setfile(Array.from(e.target.files));    
       };

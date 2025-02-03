@@ -4,6 +4,7 @@ import axios from "axios";
 export const Appcontext=createContext();
 
 export  const AppcontextProvider=(props)=>{
+    axios.defaults.withCredentials=true;
     const [serchData, setSearchData] = useState({
         bikeName:'',
     })

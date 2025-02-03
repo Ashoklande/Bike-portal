@@ -32,7 +32,8 @@ const BikeUploadedData = () => {
       toast.error(err);
     }
   };
-
+ 
+  axios.defaults.withCredentials=true;
   const onDeleteHandle=async(_id)=>{
 
     const response=await axios.post(`${import.meta.env.VITE_BASE_URL}/bike/Deletebike`,{_id});
