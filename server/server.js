@@ -10,12 +10,12 @@ import ConnectCloudinary from './config/cloudinary.js';
  
 
 const app=express();
+app.use(cors({
+    origin: ["https://bike-portal-backend.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
 
-app.use(cors(),{
-    origin:["https://bike-portal-backend.vercel.app/"],
-    methods:["POST","GET"],
-    credentials:true
-})
 app.use(express.json());
 app.use(cookieParser());
 await ConnectTodb();
