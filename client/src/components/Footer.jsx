@@ -2,7 +2,7 @@ import React from 'react'
 import github from '../assets/img/github.png'
 import instagram from '../assets/img/instagram.png'
 import linkdin from '../assets/img/linkedin.png'
-import motor from '../assets/img/Motorcycle.png'
+import motor from '../assets/img/motorcycle.png'
 
 const Footer = () => {
   return (

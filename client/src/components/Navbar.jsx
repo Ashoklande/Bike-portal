@@ -3,7 +3,7 @@ import { Appcontext } from "../Context/Appcontext";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { useState } from "react";
-import motor from "../assets/img/Motorcycle.png";
+import motor from "../assets/img/motorcycle.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
