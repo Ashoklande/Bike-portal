@@ -11,7 +11,9 @@ import ConnectCloudinary from './config/cloudinary.js';
 
 const app=express();
 app.use(cors({
-  origin: 'https://bike-portal-client.onrender.com',
+  origin: 'https://bike-portal-client.onrender.com',  // Make sure this matches the actual domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Optional: specify allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization']  // Optional: specify allowed headers
 }));
 
 app.use(express.json());
