@@ -6,6 +6,11 @@ import {v2 as cloudinary} from 'cloudinary';
 
 
 export const AddbikeData=async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
+  
    try{
 
       
@@ -59,7 +64,11 @@ export const AddbikeData=async(req,res)=>{
 
 
 export const getAllbike=async(req,res)=>{
-
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
+  
     const bikedata=await returnbike();
 
   return res.json({status:'success',bikedata});
@@ -67,6 +76,11 @@ export const getAllbike=async(req,res)=>{
 
 
 export const DeleteBikeData=async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
+  
 
     try{
 

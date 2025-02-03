@@ -4,7 +4,11 @@ import { findUser, findUserOnid } from '../services/findUser.js';
 import jwt from 'jsonwebtoken';
 
 export const createUser=async(req,res)=>{
-
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
+  
      try{
         const {fullname,username,password}=req.body;
         
@@ -43,6 +47,10 @@ export const createUser=async(req,res)=>{
 
 //login
 export const userLogin=async(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
    
     const {username,password}=req.body;
 
@@ -75,6 +83,11 @@ export const userLogin=async(req,res)=>{
 //profile 
 
 export const getProfile=(req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
+  
         const user=req.user;
     
         return res.json({status:'sucess',user})
@@ -82,7 +95,11 @@ export const getProfile=(req,res)=>{
 
 
 export const getDatawithBike=async(req,res)=>{
-    
+    res.setHeader('Access-Control-Allow-Origin', 'https://bike-portal-frontend.vercel.app');  // Your frontend domain
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');  // Allowed methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');  // Allowed headers
+    res.setHeader('Access-Control-Allow-Credentials', 'true');  // Allow credentials (cookies, etc.)
+  
     
      
     try{
