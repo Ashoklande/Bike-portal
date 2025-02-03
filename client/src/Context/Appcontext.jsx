@@ -15,7 +15,7 @@ export  const AppcontextProvider=(props)=>{
     //fetching datad from assets
      const fetchData=async()=>{
             
-          const response=await axios.get(`${import.meta.env.VITE_BASE_URL}/bike/getAllbike`);
+          const response=await axios.get(`${import.meta.env.VITE_BASE_URL}bike/getAllbike`);
             
           if(response.data.status==='success'){
                 setbikeData(response.data.bikedata);
