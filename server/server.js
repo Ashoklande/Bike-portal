@@ -10,7 +10,7 @@ import ConnectCloudinary from './config/cloudinary.js';
  
 
 const app=express();
-const allowedOrigin = 'https://bike-portal-client.onrender.com/';
+const allowedOrigin = 'https://bike-portal-client.onrender.com';
 
 app.use(cors({
   origin: allowedOrigin,      // Allow your front-end origin
