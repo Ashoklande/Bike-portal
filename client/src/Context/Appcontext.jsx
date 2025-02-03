@@ -15,7 +15,7 @@ export  const AppcontextProvider=(props)=>{
     //fetching datad from assets
      const fetchData=async()=>{
             
-          const response=await axios.get(`${import.meta.env.VITE_BASE_URL}bike/getAllbike`);
+          const response=await axios.get(`${import.meta.env.VITE_BASE_URL}/bike/getAllbike`);
             
           if(response.data.status==='success'){
                 setbikeData(response.data.bikedata);
@@ -40,7 +40,7 @@ useEffect(()=>{
 const getdata= async()=>{
     
     if(token){
-        const response=await axios.get('http://localhost:4000/user/profile',{
+        const response=await axios.get(`${import.meta.env.VITE_BASE_URL}/user/profile`,{
             headers: {
               Authorization: `Bearer ${token}`,  // Pass token in Authorization header
             }})
