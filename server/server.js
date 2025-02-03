@@ -10,7 +10,9 @@ import ConnectCloudinary from './config/cloudinary.js';
  
 
 const app=express();
-
+app.use(cors({
+  origin: 'https://bike-portal-client.onrender.com',
+}));
 
 app.use(express.json());
 app.use(cookieParser());
